@@ -1,0 +1,11 @@
+.cocktail {
+  font-size: 12px;
+  box-shadow: 5px 5px black;
+  overflow: hidden;
+  border-radius: 8px;
+  &:img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
