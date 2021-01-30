@@ -12,4 +12,9 @@
 @import "components/index";
 @import "pages/index";
 @import "home";
-@import "navbar";
+
+body {
+  background-repeat: repeat;
+  background-image: url("pink_square.jpeg");
+  background-size: cover;
+}

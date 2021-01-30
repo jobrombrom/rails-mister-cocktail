@@ -1,12 +1,17 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Molle:ital@1&display=swap');
+
+#nav-bar {
+  background-repeat: repeat;
+  background-image: url("pink_square.jpeg");
+  background-size: cover;
+  padding: 100px 0;
+  text-align: center;
+  line-height: 60px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+#nav-bar h1 {
+  font-family: 'Molle', cursive;
+  font-size: 150px;
+  color: white;
+  text-shadow: 5px 5px #FF0000;
 }
