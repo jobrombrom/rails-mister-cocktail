@@ -1,0 +1,8 @@
+<div class="container">
+  <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "button" %></button></div>
+  <h2 class="text-center">Pick your poison, baby!</h2>
+  <%= simple_form_for [ @cocktail ] do |f| %>
+  <%= f.input :name %>
+  <% f.submit "Add cocktail", class: "button", style: "text-align: center;" %>
+  <% end %>
+</div>

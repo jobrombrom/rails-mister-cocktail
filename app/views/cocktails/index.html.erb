@@ -1,9 +1,13 @@
 <div class="container">
-  <img class="center" src="assets/characters.jpg" alt="Disco Cocktails">
+  <div style="text-align: center;"><button><%= link_to "Add a new cocktail", new_cocktail_path, class: "button" %></button></div>
+  <div style="text-align: center;"><img src="assets/characters.jpg" alt="Disco Cocktails"></div>
   <h2 class="text-center">Menu</h2>
 
+<% @cocktails.each do |cocktail| %>
   <div class="cocktail">
     <img src="https://picsum.photos/seed/picsum/200/300">
-    <div>name</div>
+    <div><%= cocktail.name %></div>
+    <div><%= link_to "View cocktail", cocktail_path(cocktail) %></div>
   </div>
+<% end %>
 </div>
