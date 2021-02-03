@@ -1,9 +1,23 @@
 <div class="container">
   <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "button" %></button></div>
   <h2 class="text-center"><%= @cocktail.name %></h2>
-  <%= simple_form_for [ @cocktail , @dose ] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description %>
-  <%= f.submit "Add dose", class: "button", style: "text-align: center;" %>
-  <% end %>
+  <div class="row">
+    <div class="col">
+      <h3>Ingredients</h3>
+      <ul>
+      <% @cocktail.ingredients.each do |ingredient| %>
+        <li><%= ingredient[:name]%><%= ingredient.doses %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <%= simple_form_for [ @cocktail , @dose ] do |f| %>
+    <%= f.association :ingredient %>
+    <%= f.input :description %>
+    <%= f.submit "Add dose", class: "button", style: "text-align: center;" %>
+    <% end %>
+    </div>
+  </div>
 </div>
