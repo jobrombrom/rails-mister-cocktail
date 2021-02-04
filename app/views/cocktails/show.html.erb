@@ -5,8 +5,10 @@
     <div class="col">
       <h3>Ingredients</h3>
       <ul>
-      <% @cocktail.ingredients.each do |ingredient| %>
-        <li><%= ingredient[:name]%><%= ingredient.doses %></li>
+      <% @cocktail.doses.each do |dose| %>
+        <% ingredient_id = dose[:ingredient_id] %>
+        <% ingredient_name = Ingredient.find(ingredient_id) %>
+        <li><strong><%= ingredient_name[:name]%></strong> <%= dose[:description] %> <%= link_to "🗑️", cocktail_path(@cocktail), method: :delete %></li>
       <% end %>
       </ul>
     </div>
