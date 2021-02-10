@@ -8,7 +8,7 @@
       <% @cocktail.doses.each do |dose| %>
         <% ingredient_id = dose[:ingredient_id] %>
         <% ingredient_name = Ingredient.find(ingredient_id) %>
-        <li class="text"><strong><%= ingredient_name[:name]%></strong> <%= dose[:description] %> <%= link_to "🗑️", cocktail_path(@cocktail), method: :delete %></li>
+        <li class="text"><strong><%= ingredient_name[:name]%></strong> <%= dose[:description] %> <%= link_to "🗑️", dose_path(dose), method: :delete,  data: { confirm: "Are you sure?" } %></li>
       <% end %>
       </ul>
     </div>

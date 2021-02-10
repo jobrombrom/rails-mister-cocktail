@@ -5,7 +5,6 @@
 <div class="cocktails">
 <% @cocktails.each do |cocktail| %>
   <div class="cocktail">
-    <img src="https://picsum.photos/seed/picsum/50/50">
     <div><%= cocktail.name %></div>
     <div><%= link_to "View cocktail", cocktail_path(cocktail), class: "cocktail-link" %></div>
   </div>
