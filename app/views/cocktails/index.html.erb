@@ -1,15 +1,17 @@
 <div class="container">
-  <div style="text-align: center;"><button><%= link_to "Add a new cocktail", new_cocktail_path, class: "button" %></button></div>
-  <div style="text-align: center;"><img src="assets/images/giphyrecord.gif" alt="Disco Cocktails"></div>
+  <div style="text-align: center;"><button><%= link_to "Add a new cocktail", new_cocktail_path, class: "text-white" %></button></div>
   <h2 class="text-center">Menu</h2>
 
+<div class="cocktails">
 <% @cocktails.each do |cocktail| %>
   <div class="cocktail">
-    <img src="https://picsum.photos/seed/picsum/200/300">
+    <img src="https://picsum.photos/seed/picsum/50/50">
     <div><%= cocktail.name %></div>
-    <div><%= link_to "View cocktail", cocktail_path(cocktail) %></div>
+    <div><%= link_to "View cocktail", cocktail_path(cocktail), class: "cocktail-link" %></div>
   </div>
 <% end %>
+</div>
+
 </div>
 
 

@@ -1,8 +1,10 @@
 <div class="container">
-  <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "button" %></button></div>
+  <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "text-white" %></button></div>
   <h2 class="text-center">Pick your poison, baby!</h2>
   <%= simple_form_for [ @cocktail ] do |f| %>
+  <div class="text">
   <%= f.input :name %>
-  <%= f.submit "Choose ingredients" %>
+  </div>
+  <%= f.submit "Choose ingredients", class: "blue-button" %>
   <% end %>
 </div>

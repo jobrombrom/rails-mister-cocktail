@@ -1,20 +1,49 @@
 $btngreen: #6cbd3a;
+$btngreenhover: #3e8e41;
+$btnblue: #5c9efe;
+$btnbluehover: #1667c6;
+
 
 button {
   font-size: 17px;
   background-color: $btngreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  &:active {
+    background-color: $btngreenhover;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  &:hover {
+    background-color: $btngreenhover;
+  }
+}
+
+.text-white {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.blue-button {
+  font-size: 17px;
+  background-color: #5c9efe;
   color: white;
   border: 2px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px black;
   margin-bottom: 30px;
   &:active {
-    background-color: #3e8e41;
+    background-color: #1667c6;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
   &:hover {
-    background-color: #3e8e41;
+    background-color: #1667c6;
     text-decoration: none;
   }
 }

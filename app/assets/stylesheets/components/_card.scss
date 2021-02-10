@@ -1,11 +1,31 @@
+.cocktails {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 16px;
+  flex-grow: 1;
+}
+
 .cocktail {
   font-size: 24px;
+  background-color: white;
   box-shadow: 5px 5px black;
   overflow: hidden;
   border-radius: 8px;
+  border: 2px solid black;
+  text-align: center;
   &:img {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 100%;
     object-fit: cover;
+  }
+}
+
+.cocktail-link {
+  color: #FF0000;
+  &:hover {
+  color: #fcc3ca;
+  font-weight: bold;
+  text-decoration: none;
   }
 }

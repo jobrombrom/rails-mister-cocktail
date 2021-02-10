@@ -15,9 +15,17 @@
 @import "pages/index";
 
 body {
-  background-repeat: repeat;
-  background-image: url("pink_square.jpeg");
+  background-color: #fcc3ca;
+  background-image: url("rainbow.png");
   background-size: cover;
+}
+
+h1 {
+  font-family: 'Molle', cursive;
+  font-size: 150px;
+  color: white;
+  text-shadow: 5px 5px #FF0000;
+  text-align: center;
 }
 
 h2 {
@@ -36,6 +44,7 @@ h3 {
   text-shadow: 2px 2px #FFFFFF;
 }
 
-p {
+.text {
   font-family: 'ABeeZee', sans-serif;
+  font-size: 20px;
 }

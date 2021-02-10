@@ -1,24 +1,26 @@
 <div class="container">
-  <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "button" %></button></div>
+  <div style="text-align: center;"><button><%= link_to "Back to cocktails", root_path, class: "text-white" %></button></div>
   <h2 class="text-center"><%= @cocktail.name %></h2>
   <div class="row">
-    <div class="col">
+    <div class="col-6">
       <h3>Ingredients</h3>
       <ul>
       <% @cocktail.doses.each do |dose| %>
         <% ingredient_id = dose[:ingredient_id] %>
         <% ingredient_name = Ingredient.find(ingredient_id) %>
-        <li><strong><%= ingredient_name[:name]%></strong> <%= dose[:description] %> <%= link_to "🗑️", cocktail_path(@cocktail), method: :delete %></li>
+        <li class="text"><strong><%= ingredient_name[:name]%></strong> <%= dose[:description] %> <%= link_to "🗑️", cocktail_path(@cocktail), method: :delete %></li>
       <% end %>
       </ul>
     </div>
-  </div>
-  <div class="row">
-    <div class="col">
+    <div class="col-6 form-group">
     <%= simple_form_for [ @cocktail , @dose ] do |f| %>
+    <div class="text">
     <%= f.association :ingredient %>
-    <%= f.input :description %>
-    <%= f.submit "Add dose", class: "button", style: "text-align: center;" %>
+    </div>
+    <div class="text">
+    <%= f.input :description, class: "text" %>
+    </div>
+    <%= f.submit "Add dose", class: "blue-button" %>
     <% end %>
     </div>
   </div>
